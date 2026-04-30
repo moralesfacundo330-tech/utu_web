@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusión para Todos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <h1>Inclusión</h1>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#info">¿Qué es?</a></li>
+                <li><a href="#qr">QR</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#final">Reflexión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div>
+            <h2>La inclusión es para todos</h2>
+            <p>Un proyecto educativo sobre igualdad y accesibilidad</p>
+            <button onclick="scrollToSection('video')">Ver video</button>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="video-section">
+        <h2>Nuestro mensaje</h2>
+        <video controls>
+            <source src="assets/video/intro.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- INFO -->
+    <section id="info" class="info">
+        <h2>¿Qué es la inclusión?</h2>
+        <p>
+            La inclusión significa que todas las personas, sin importar sus diferencias,
+            puedan participar en igualdad de condiciones en la sociedad.
+        </p>
+        <p>
+            Es fundamental para construir un mundo más justo, accesible y respetuoso.
+        </p>
+    </section>
+
+    <!-- QR -->
+<section id="qr" class="qr-section">
+    <h2>Escaneá y aprendé</h2>
+
+    <div class="qr-container">
+
+        <div class="qr-card" onclick="openQR(this)">
+            <img src="assets/img/Adscripcion.png">
+            <h3>Adscripcion</h3>
+            <p>Más información</p>
+        </div>
+
+        <div class="qr-card" onclick="openQR(this)">
+            <img src="assets/img/Baño unisex.png">
+            <h3>Baño</h3>
+            <p>Más información</p>
+        </div>
+
+        <div class="qr-card" onclick="openQR(this)">
+            <img src="assets/img/Salon de belleza Capilar.png">
+            <h3>Salon de belleza</h3>
+            <p>Más información</p>
+        </div>
+
+        <div class="qr-card" onclick="openQR(this)">
+            <img src="assets/img/Taller de Carpinteria.png">
+            <h3>Carpintería</h3>
+            <p>Más información</p>
+        </div>
+
+        <div class="qr-card" onclick="openQR(this)">
+            <img src="assets/img/Sala de diálogo.png">
+            <h3>Sala de diálogo</h3>
+            <p>Más información</p>
+        </div>
+
+        <div class="qr-card" onclick="openQR(this)">
+            <img src="assets/img/Mecánica.png">
+            <h3>Mecánica</h3>
+            <p>Más información</p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- MODAL QR -->
+    <div id="qrModal" class="qr-modal" onclick="closeQR()">
+        <img id="qrImage" src="">
+    </div>
+
+    <!-- TIPOS -->
+    <section id="tipos" class="tipos">
+        <h2>Tipos de inclusión</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Educativa</h3>
+                <p>Acceso a educación sin barreras.</p>
+            </div>
+
+            <div class="card">
+                <h3>Social</h3>
+                <p>Participación en la comunidad.</p>
+            </div>
+
+            <div class="card">
+                <h3>Digital</h3>
+                <p>Acceso a tecnología para todos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="final" class="final">
+        <h2>Reflexión</h2>
+        <p>
+            La inclusión comienza con pequeñas acciones. ¿Qué podés hacer vos hoy
+            para hacer un mundo más justo?
+        </p>
+    </section>
+
+    <!-- LOGO UTU -->
+    <img src="assets/img/logo-utu.png" alt="Logo UTU" class="logo-utu">
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Escuela Técnica Maestro Carlos Martín de Vecchi - Proyecto Escolar </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+    <!-- AGREGAR antes del footer -->
+<section class="banner-img"></section>
+
+<div class="creditos">
+    Proyecto web desarrollado por Facundo Morales
+</div>
