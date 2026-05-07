@@ -1,0 +1,155 @@
+:root {
+    --bg-dark: #131313;
+    --primary-blue: #002f6c;
+    --accent-yellow: #ffc969;
+    --text-white: #e5e2e1;
+    --error-red: #93000a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* --- Área de Video (80%) --- */
+.video-container {
+    height: 80%;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.overlay-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.play-icon {
+    font-size: 120px;
+    color: #aec6ff;
+    font-variation-settings: 'FILL' 1;
+}
+
+.overlay-content h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+/* Etiqueta Live */
+.live-tag {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: var(--error-red);
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ffb4ab;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+/* --- Barra de Información (20%) --- */
+.info-bar {
+    height: 20%;
+    background-color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0 -8px 20px rgba(0,0,0,0.4);
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.utu-logo {
+    height: 70px;
+    filter: brightness(0) invert(1);
+}
+
+.divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(255,255,255,0.2);
+}
+
+.bank-icon {
+    font-size: 48px;
+    color: var(--accent-yellow);
+}
+
+.footer-center h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+}
+
+.footer-right p {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    text-align: right;
+}
+
+.dev-logo {
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    .footer-center h1 { font-size: 1.2rem; }
+    .utu-logo { height: 40px; }
+    .info-bar { padding: 0 15px; }
+    .footer-right p { display: none; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
